@@ -1,5 +1,5 @@
 // Read existing notes from localStorage
-const getSavedNotes = function () {
+const getSavedNotes = () => {
     const notesJSON = localStorage.getItem('notes')
 
     if (notesJSON !== null) {
@@ -10,15 +10,16 @@ const getSavedNotes = function () {
 }
 
 // Save the notes to localStorage
-const saveNotes = function (notes) {
+const saveNotes = (notes) => {
     localStorage.setItem('notes', JSON.stringify(notes))
 }
 
 // Remove note from the list
-const removeNote = function(id){
-    const noteIndex = notes.findIndex(function(note){
-        return note.id === id;
-    })
+const removeNote = (id) =>{
+    // const noteIndex = notes.findIndex(function(note){
+    //     return note.id === id;
+    // })
+    const noteIndex = notes.findIndex((note) => note.id === id)
     if (noteIndex > -1){
         notes.splice(noteIndex, 1);
     }
@@ -45,7 +46,7 @@ const generateNoteDOM = function (note) {
     } else {
         textEl.textContent = 'Unnamed note'
     }
-    textEl.setAttribute('href', `/edit.html#${note.id}`);
+    textEl.setAttribute('href', `./edit.html#${note.id}`);
     noteEl.appendChild(textEl);
 
     return noteEl

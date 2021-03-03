@@ -9,6 +9,7 @@ renderNotes(notes, filters)
 
 document.querySelector('#create-note').addEventListener('click', function (e) {
     const id = uuidv4();
+    console.log(uuidv4());
     const timestamp = moment().valueOf();
 
     notes.push({
@@ -20,7 +21,7 @@ document.querySelector('#create-note').addEventListener('click', function (e) {
     })
     saveNotes(notes);
     // renderNotes(notes, filters)
-    location.assign(`/edit.html#${id}`);
+    location.assign(`./edit.html#${id}`);
 })
 
 document.querySelector('#search-text').addEventListener('input', function (e) {
