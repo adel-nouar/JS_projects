@@ -5,12 +5,7 @@ const filters = {
     hideCompleted: false
 }
 
-
-
-
 renderTodos(todos, filters)
-
-
 
 document.querySelector('#search-text').addEventListener('input', (e) =>{
     filters.searchText = e.target.value

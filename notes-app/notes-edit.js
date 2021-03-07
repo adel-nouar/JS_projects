@@ -15,7 +15,6 @@ if (note === undefined){
     location.assign('./index.html');
 }
 
-
 titleElement.value = note.title;
 bodyElement.value = note.body;
 dateElement.textContent = generateLastEdited(note.updatedAt);
@@ -48,9 +47,7 @@ window.addEventListener('storage', (e) =>{
         
         if (note === undefined){
             location.assign('./index.html');
-        }
-        
-        
+        }       
         titleElement.value = note.title;
         bodyElement.value = note.body;
         dateElement.textContent = generateLastEdited(note.updatedAt);

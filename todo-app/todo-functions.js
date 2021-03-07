@@ -4,7 +4,6 @@ const getSavedTodos = () => {
     return todosJSON !== null ? JSON.parse(todosJSON) :[];
 }
 
-
 const saveTodos = (todos) => {
     localStorage.setItem('todos',JSON.stringify(todos));
 }
@@ -26,7 +25,6 @@ const toggleTodo = (id) => {
     }
 }
 
-
 const renderTodos = (todos, filters) => {
 
     const filteredTodos = todos.filter((todo) => {
@@ -35,7 +33,6 @@ const renderTodos = (todos, filters) => {
         // debugger; 
         return searchTextMatch && hideCompletedMatch;
     })
-
 
     const incompleteTodos = filteredTodos.filter((todo) => !todo.completed)
 
@@ -48,7 +45,6 @@ const renderTodos = (todos, filters) => {
         document.querySelector('#todos').appendChild(generateTodoDOM(todo));
     })
 }
-
 
 const generateTodoDOM = (todo) => {
     const todoEl = document.createElement('div');
@@ -63,7 +59,6 @@ const generateTodoDOM = (todo) => {
         saveTodos(todos);
         renderTodos(todos, filters);
     })
-
 
     // Setup todo checkbox
     checkbox.setAttribute('type', 'checkbox');

@@ -41,12 +41,3 @@ window.addEventListener('storage', (e) => {
 
     }
 })
-
-
-// 1. Add createdAt and updatedat to the new notes (store timestamp)
-
-// 2. Update updatedAt when someone edits a little or body
-
-// 3. Delete all old notes before testing
-
-
