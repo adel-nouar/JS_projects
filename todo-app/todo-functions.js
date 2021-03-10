@@ -1,3 +1,6 @@
+'use strict';
+
+
 const getSavedTodos = () => {
 
     const todosJSON = localStorage.getItem('todos');
