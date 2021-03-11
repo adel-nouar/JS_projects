@@ -1,3 +1,4 @@
+// JS file containing functions
 'use strict';
 
 // Read existing notes from localStorage

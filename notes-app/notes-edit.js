@@ -1,3 +1,4 @@
+// JS related to edit a note
 'use strict';
 // 1. Add a DOM element between the title and body inputs (empty span)
 // 2. Set text value: Last edited 4 hours ago

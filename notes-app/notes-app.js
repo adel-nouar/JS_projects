@@ -1,3 +1,4 @@
+// Main js for the apps 
 'use strict';
 
 let notes = getSavedNotes()
