@@ -1,3 +1,4 @@
+// Main JS for the todo app 
 'use strict';
 
 let todos = getSavedTodos();
