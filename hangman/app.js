@@ -1,8 +1,14 @@
-const product = new Object({
-    name:'The War Of Art'
-})
+// Primitive values: string, number, boolean, null, undefined
 
-Object.prototype.hasOwnProperty = () => 'This is the new function'
-// hasOwnProperty
-console.log(product.hasOwnProperty('hasOwnProperty'))
+// Object: myObject --> Object.prototype --> null
+// Array: myArray --> Array.prototype --> Object.prototype --> null
+// Functions myFunc ==> Function.prototype --> Object.prototype --> null
+// String: myString --> String.prototype --> Object.prototype --> null
+// String: myNumber --> Number.prototype --> Object.prototype --> null
+// String: myBoolean --> Boolean.prototype --> Object.prototype --> null
+
+const product = 'Product'
 console.log(product)
+
+const otherProduct = new String('Phone')
+console.log(otherProduct)
