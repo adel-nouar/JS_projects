@@ -7,7 +7,7 @@ class Hangman {
 
     }
     calculateStatus() {
-        const finished = this.guessedWord.every((letter) => this.guessedLetters.includes(letter));
+        const finished = this.guessedWord.every((letter) => this.guessedLetters.includes(letter) || letter === ' ');
 
         if (this.remainingGuesses === 0) {
             this.status = 'failed';
@@ -23,7 +23,7 @@ class Hangman {
         } else if (this.status === 'failed') {
             return `Nice try! The word was "${ this.guessedWord.join('') }".`;
         } else {
-            return 'Great work! You guessed the work.';
+            return 'Great work! You guessed the word.';
         }
     }
     get puzzle() {
