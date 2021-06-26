@@ -14,20 +14,15 @@ window.addEventListener('keypress', (e) => {
     guessesEl.textContent = game1.statusMessage;
 })
 
-// const puzzle = getPuzzle((error, puzzle) => {
-//     if (error) {
-//         console.log(`Error: ${error}`);
-//     }else {
-//         console.log(puzzle);
-//     }
-// });
+const puzzle = getPuzzle((error, puzzle) => {
+    if (error) {
+        console.log(`Error: ${error}`);
+    }else {
+        console.log(puzzle);
+    }
+});
 
 
-
-const puzzle = getPuzzleSync();
-console.log(puzzle);
-
-console.log('Do something else.');
 
 // Making and HTTP request
 
