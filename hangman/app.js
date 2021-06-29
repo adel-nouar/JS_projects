@@ -22,6 +22,7 @@ getPuzzle('2').then((puzzle) => {
 
 
 
+
 // getCountry('FR').then((country) => {
 //     console.log(country.name);
 // }, (err) => {
