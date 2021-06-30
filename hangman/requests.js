@@ -8,26 +8,28 @@ const getPuzzle = async (wordCount) => {
     }
 }
 
-const getCountry = (countryCode) => {
-    return fetch('http://restcountries.eu/rest/v2/all').then((response) => {
-        if (response.status === 200) {
-            return response.json();
-        } else {
-            throw new Error('Unable to fetch data.');
-        }
-    }).then((data) => {
-        return data.find((country) => country.alpha2Code === countryCode);
-    })
+const getCurrentCountry = async () => {
+    const location = await getLocation();
+    return getCountry(location.country);
 }
 
-const getLocation = () => {
+const getCountry = async (countryCode) => {
+    const response = await fetch('http://restcountries.eu/rest/v2/all');
+    if (response.status === 200) {
+        const data = await response.json();
+        return data.find((country) => country.alpha2Code === countryCode);
+    } else {
+        throw new Error('Unable to fetch the Country.');
+    }
+}
+
+const getLocation = async () => {
     // XXXXXXX should be the token given by ipinfo related to our account
     url = 'https://ipinfo.io/json?token=c0ab5cf2207300';
-    return fetch(url).then((response) => {
-        if (response.status === 200) {
-            return response.json();
-        } else {
-            throw new Error('Unable to fetch location');
-        }
-    })
+    const response = await fetch(url);
+    if (response.status === 200) {
+        return response.json();
+    } else {
+        throw new Error('Unable to fetch location');
+    }
 }
