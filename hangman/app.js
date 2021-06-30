@@ -27,6 +27,7 @@ getPuzzle('2').then((puzzle) => {
 // })
 
 getLocation().then((location) => {
+    console.log(location)
     return getCountry(location.country);
 }).then((country) => {
     console.log(country.name);
