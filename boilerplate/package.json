@@ -4,6 +4,7 @@
   "description": "",
   "main": "input.js",
   "scripts": {
+    "webpack": "webpack",
     "build": "babel src/index.js -o public/scripts/bundle.js --presets @babel/env --watch"
   },
   "author": "",
