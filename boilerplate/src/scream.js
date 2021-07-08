@@ -1,1 +1,4 @@
-export const scream = (text) => `${text.toUpperCase()}`;
+const scream = (text) => `${text.toUpperCase()}`;
+export default scream;
+
+
