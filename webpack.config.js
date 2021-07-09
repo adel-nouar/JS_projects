@@ -21,5 +21,6 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, "./boilerplate/public"),
         publicPath: path.resolve(__dirname, "./boilerplate/public/scripts/")
-    }
+    },
+    devtool: 'source-map'
 }
