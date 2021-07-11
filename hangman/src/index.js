@@ -1,6 +1,7 @@
 import Hangman from './hangman';
 import getPuzzle from './requests';
 
+
 const puzzleEl = document.querySelector('#puzzle');
 const guessesEl = document.querySelector('#guesses');
 // const game1 = new Hangman('Cat', 2);
