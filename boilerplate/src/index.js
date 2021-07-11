@@ -1,18 +1,21 @@
-// Test rest parameters
-const calculateAverage = (thing, ...numbers) => {
-    // return (num1 + num2) / 2;
-    let sum = 0;
-    numbers.forEach((num) => sum += sum);
-    const average = sum/numbers.length;
-    return `The average ${thing} is ${average}`;
-}
-
-console.log(calculateAverage('grade',0,100));
-
 const printTeam = (team, coach, ...players) => {
     console.log(`Team: ${team}`);
     console.log(`Coach: ${coach}`);
     console.log(`Players: ${players}`);
 }
 
+const team = {
+    name: 'Liberty', 
+    coach: 'Casey Penn', 
+    players: ['Marge', 'Aiden', 'Herbert', 'Sherry']
+}
+
+console.log("With Rest parameters");
 printTeam('Liberty', 'Casey Penn', 'Marge', 'Aiden', 'Herbert', 'Sherry');
+
+console.log("With spread syntax parameters");
+printTeam(team.name, team.coach, ...team.players);
+
+
+const cities = ['Barcelona', 'Cape Town', 'Bordeaux'];
+const citiesCopy = [...cities] // Copy cities to citiesCopy (each element is copied)
