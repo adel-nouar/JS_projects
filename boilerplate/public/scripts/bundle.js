@@ -1,2 +1,0 @@
-(()=>{"use strict";console.log("utilities.js"),console.log("From my code"),console.log("New output");console.log("index.js"),console.log(12),console.log("".concat("test new scream".toUpperCase())),console.log(10*10),console.log("Coucou")})();
-//# sourceMappingURL=bundle.js.map

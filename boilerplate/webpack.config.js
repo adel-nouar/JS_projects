@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-    entry: './boilerplate/src/index.js',
+    entry: ['babel-polyfill', './src/index.js'],
     output: {
-        path: path.resolve(__dirname, "./boilerplate/public/scripts"),
+        path: path.resolve(__dirname, "./public/scripts"),
         filename: 'bundle.js'
     },
     module: {
@@ -19,8 +19,8 @@ module.exports = {
         }]
     },
     devServer: {
-        contentBase: path.resolve(__dirname, "./boilerplate/public"),
-        publicPath: path.resolve(__dirname, "./boilerplate/public/scripts/")
+        contentBase: path.resolve(__dirname, "./public"),
+        publicPath: path.resolve(__dirname, "./public/scripts/")
     },
     devtool: 'source-map'
 }
