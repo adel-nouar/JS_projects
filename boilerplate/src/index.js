@@ -50,3 +50,11 @@ const overview = {
     ...location
 }
 console.log(overview);
+
+const todo = {
+    id: 'jklmjmik',
+    text: 'test',
+    completed: false
+}
+const {text:todo_text, completed} = todo;
+console.log(todo_text, completed);

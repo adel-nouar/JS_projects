@@ -1,1 +1,0 @@
-Simple todo app
