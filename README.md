@@ -1,12 +1,11 @@
 # JS_projects
-Some JS projects 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+## Some JS projects
 
-Actually note and todo app in progress
->>>>>>> 96fc5db (Create README.md)
-=======
+### Notes-App
 
-Actually note and todo app in progress
->>>>>>> 96fc5db (Create README.md)
+### Todo-App
+
+### Hangman
+
+### Bollerplate
+
